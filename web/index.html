@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <h1>All Electronics Store</h1>
+        </nav>
+        <div id="product-list" class="product-list"></div>
+
+        <button class="chat_button" id="chat_button">Chat Now</button>
+
+        <div id="chat_popup">
+            <div class="message_container" id="message_container">
+                <div id="loader">...</div>
+            </div>
+            <div class="chat_input_container">
+                <input type="text" id="chat_input" autocomplete="off" placeholder="type your message here">
+                <button id="send_message_btn">Send</button>
+            </div>
+        </div>
+
+        <!-- <form>
+            <input type="text" id="product-name" placeholder="Product Name">
+            <input type="number" id="product-price" placeholder="Product Price">
+            <input type="text" id="product-description" placeholder="dscription">
+            <input type="text" id="product-image" placeholder="Product Image">
+            <input type="number" id="product-stock" placeholder="no of stock items">
+            <button type="submit">Add Product</button>
+        </form> -->
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>

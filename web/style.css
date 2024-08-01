@@ -1,0 +1,216 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.container {
+  margin: 0 auto;
+  /* background-color: #203a56; */
+}
+
+nav {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-items: center; */
+  gap: 30px;
+  padding: 20px;
+}
+
+.product-card {
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  min-width: 130;
+  max-width: 200px;
+  margin-bottom: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card img {
+  width: 70%;
+  height: auto;
+  align-self: center;
+}
+
+.product-details {
+  padding: 10px;
+  flex: 1;
+}
+
+.product-name {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.product_image {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+}
+
+.product-description {
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.product-price {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.product-stock-true {
+  font-size: 0.9em;
+  color: green;
+}
+
+.product-stock-false {
+  font-size: 0.9em;
+  color: red;
+}
+
+.chat_button {
+  padding: 10px;
+  margin: 20px 0;
+  cursor: pointer;
+  position: fixed;
+  bottom: 0px;
+  left: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: #007bff;
+  color: #ffffff;
+}
+
+#chat_popup {
+  display: block;
+  position: fixed;
+  bottom: 10px;
+  right: 5px;
+  width: 400px;
+  height: 500px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px #1208081a;
+  background-color: #ffffff;
+  overflow-y: scroll;
+  padding: 10px 5px 0px 5px;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+
+
+.message_container {
+  padding: 10px 5px 0px 5px;
+  margin-bottom: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* #loader {
+  background-color: #007bff;
+  position: fixed;
+  bottom: 70px;
+} */
+
+#loader {
+  /* background-color: #007bff; */
+  color: gray;
+  padding: 5px;
+  border-radius: 5px;
+  position: fixed;
+  bottom: 70px;
+  display: none;
+  font-size: 50px;
+  animation: blink 0.7s infinite;
+  text-align: center;;
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+.chat_input_container {
+  display: flex;
+  gap: 5px;
+  position: fixed;
+  bottom: 0;
+  background-color: #f8f9fa;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  width: 405px;
+}
+
+.user {
+  background-color: #f8f9fa;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  /* text-align: right; */
+  align-self: flex-end;
+  font-size: 14px;
+  max-width: 70%;
+}
+
+.ai {
+  background-color: #007bff;
+  color: #ffffff;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  text-align: left;
+  width: 70%;
+  font-size: 14px;
+}
+
+#chat_input {
+  flex: 1;
+  height: 40px;
+  border-radius: 9px;
+  border: 1px solid #ddd;
+  padding: 5px 10px;
+  outline: none;
+  flex-basis: 0.7;
+}
+
+#send_message_btn {
+  padding: 10px 20px;
+  border-radius: 9px;
+  cursor: pointer;
+  border: none;
+  background-color: #007bff;
+  color: #ffffff;
+  height: 40px;
+  flex-basis: 0.3;
+}
