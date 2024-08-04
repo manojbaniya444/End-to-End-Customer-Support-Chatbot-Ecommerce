@@ -30,7 +30,7 @@ os.environ["GROQ_API_KEY"] = os.getenv("GROQ_API_KEY")
 os.environ["PINECONE_API_KEY"] = os.environ["PINECONE_API_KEY"]
 
 
-MODEL_NAME = "llama3-8b-8192"
+MODEL_NAME = "llama3-70b-8192"
 EMBEDDING_MODEL = "D:\\Major Project\\Mid Term Project\\sql_rag_backend\\sentence-transformers-local\\all-MiniLM-L6-v2"
 DB_PATH = "products.db"
 INDEX_NAME = "storeagent"
@@ -112,7 +112,7 @@ rag_chain = create_retrieval_chain(
 classifier_template = ChatPromptTemplate.from_messages(
     [
         ("system", "You are a customer service agent who is expert in classifying the customer questions in ecommerce store."),
-        ("human", "Classify the question: {question} as one of the following:\n1. 'product_inquiry': If the customer is asking about specific product price, product details or product stock only.\n2. 'general_information': If the customer is asking about the store information, store location, store policies or anything that is general information only about the store.\n3. 'greeting': If the user says hello, hi, initiates a conversation or asks about you. \n4. 'others': If the question does not fall in any of the above categories and is likely out of topic for a customer support service of ecommerce store.")
+        ("human", "Classify the question: {question} as one of the following:\n1. 'product_inquiry': If the customer is asking about specific product price, product details or product stock only.\n2. 'general_information': If the customer is asking about the store information, store location, store policies, about who develop the chatbot agent or anything that is general information only about the store.\n3. 'greeting': If the user says hello, hi, initiates a conversation or asks about you. \n4. 'others': If the question does not fall in any of the above categories and is likely out of topic for a customer support service of ecommerce store.")
     ]
 )
 

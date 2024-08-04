@@ -63,7 +63,7 @@ function sendMessage() {
         .then((data) => {
           console.log("Success:", data);
           const ai = document.createElement("p");
-
+          
           ai.textContent = data.response;
           ai.className = "ai";
 
@@ -76,6 +76,7 @@ function sendMessage() {
         });
     } catch (error) {
       console.error("Error sending message:", error);
+      loader.style.display = "none";
     }
     console.log("Message sent: ", message);
     document.getElementById("chat_input").value = "";
